@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #e9e9e9;
+}
+
+.container{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 80%;
+    /* border: 2px solid black; */
+    display: flex;
+    box-shadow: 3px 3px 10px rgba(0,0,0, 0.5);
+    background-color: aliceblue;
+}
+
+.todo_essentials{
+    padding: 10px 20px;
+}
+
+
+.delete_button{
+    margin-left: auto;
+    display: block;
+    height: match-parent;
+    padding: 5px 20px;
+    background-color: #da0d25;
+    color: white;
+    outline: none;
+    border: none;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.delete_button:hover,
+.delete_button:focus{
+    background-color: #9c0315;
+}
+
+@media only screen and (min-width: 600px){
+    .container{
+        min-width: 0;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .card:hover .delete_button{
+        transform: scaleX(1) !important;
+    }
+}
