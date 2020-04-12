@@ -20,9 +20,9 @@ card.addEventListener("touchmove", e => {
 card.addEventListener("touchend", e => {
   if (moveX < MOVE_THRESHOLD * Math.sign(moveX) && !isDeleteButtonOpen) {
     theDeleteButton.style.transform = "scaleX(1)";
-    isDeleteButtonOpen = !isDeleteButtonOpen;
+    isDeleteButtonOpen = true;
   } else if (moveX > MOVE_THRESHOLD * Math.sign(moveX) && isDeleteButtonOpen) {
     theDeleteButton.style.transform = "scaleX(0)";
-    isDeleteButtonOpen = !isDeleteButtonOpen;
+    isDeleteButtonOpen = false;
   }
 });
